@@ -1,0 +1,9 @@
+C:\Dev\ECard\e-kad-managment\Process\ECardManagment.Process\bin\Debug\netstandard2.0\ECardManagment.Process.deps.json
+C:\Dev\ECard\e-kad-managment\Process\ECardManagment.Process\bin\Debug\netstandard2.0\ECardManagment.Process.dll
+C:\Dev\ECard\e-kad-managment\Process\ECardManagment.Process\bin\Debug\netstandard2.0\ECardManagment.Process.pdb
+C:\Dev\ECard\e-kad-managment\Process\ECardManagment.Process\obj\Debug\netstandard2.0\ECardManagment.Process.csprojAssemblyReference.cache
+C:\Dev\ECard\e-kad-managment\Process\ECardManagment.Process\obj\Debug\netstandard2.0\ECardManagment.Process.csproj.CoreCompileInputs.cache
+C:\Dev\ECard\e-kad-managment\Process\ECardManagment.Process\obj\Debug\netstandard2.0\ECardManagment.Process.AssemblyInfoInputs.cache
+C:\Dev\ECard\e-kad-managment\Process\ECardManagment.Process\obj\Debug\netstandard2.0\ECardManagment.Process.AssemblyInfo.cs
+C:\Dev\ECard\e-kad-managment\Process\ECardManagment.Process\obj\Debug\netstandard2.0\ECardManagment.Process.dll
+C:\Dev\ECard\e-kad-managment\Process\ECardManagment.Process\obj\Debug\netstandard2.0\ECardManagment.Process.pdb

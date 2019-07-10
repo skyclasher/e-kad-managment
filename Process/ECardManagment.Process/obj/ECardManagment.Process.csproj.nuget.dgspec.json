@@ -1,0 +1,62 @@
+{
+  "format": 1,
+  "restore": {
+    "C:\\Dev\\ECard\\e-kad-managment\\Process\\ECardManagment.Process\\ECardManagment.Process.csproj": {}
+  },
+  "projects": {
+    "C:\\Dev\\ECard\\e-kad-managment\\Process\\ECardManagment.Process\\ECardManagment.Process.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Dev\\ECard\\e-kad-managment\\Process\\ECardManagment.Process\\ECardManagment.Process.csproj",
+        "projectName": "ECardManagment.Process",
+        "projectPath": "C:\\Dev\\ECard\\e-kad-managment\\Process\\ECardManagment.Process\\ECardManagment.Process.csproj",
+        "packagesPath": "C:\\Users\\asyaf\\.nuget\\packages\\",
+        "outputPath": "C:\\Dev\\ECard\\e-kad-managment\\Process\\ECardManagment.Process\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Microsoft\\Xamarin\\NuGet\\",
+          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\asyaf\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "netstandard2.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "netstandard2.0": {
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "netstandard2.0": {
+          "dependencies": {
+            "NETStandard.Library": {
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[2.0.3, )",
+              "autoReferenced": true
+            }
+          },
+          "imports": [
+            "net461"
+          ],
+          "assetTargetFallback": true,
+          "warn": true
+        }
+      }
+    }
+  }
+}
