@@ -21,5 +21,6 @@
 
   <ItemGroup>
     <ProjectReference Include="..\..\..\..\Project\Project.Framework\Project.Framework.csproj" />
+    <ProjectReference Include="..\..\Process\ECardManagment.Process\ECardManagment.Process.csproj" />
   </ItemGroup>
 </Project>
