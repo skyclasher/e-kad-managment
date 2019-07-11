@@ -1,0 +1,8 @@
+D:\Dev\Ecard\ECardManagment\ViewModel\ECardManagment.ViewModel\bin\Debug\netstandard2.0\ECardManagment.ViewModel.deps.json
+D:\Dev\Ecard\ECardManagment\ViewModel\ECardManagment.ViewModel\bin\Debug\netstandard2.0\ECardManagment.ViewModel.dll
+D:\Dev\Ecard\ECardManagment\ViewModel\ECardManagment.ViewModel\bin\Debug\netstandard2.0\ECardManagment.ViewModel.pdb
+D:\Dev\Ecard\ECardManagment\ViewModel\ECardManagment.ViewModel\obj\Debug\netstandard2.0\ECardManagment.ViewModel.csproj.CoreCompileInputs.cache
+D:\Dev\Ecard\ECardManagment\ViewModel\ECardManagment.ViewModel\obj\Debug\netstandard2.0\ECardManagment.ViewModel.AssemblyInfoInputs.cache
+D:\Dev\Ecard\ECardManagment\ViewModel\ECardManagment.ViewModel\obj\Debug\netstandard2.0\ECardManagment.ViewModel.AssemblyInfo.cs
+D:\Dev\Ecard\ECardManagment\ViewModel\ECardManagment.ViewModel\obj\Debug\netstandard2.0\ECardManagment.ViewModel.dll
+D:\Dev\Ecard\ECardManagment\ViewModel\ECardManagment.ViewModel\obj\Debug\netstandard2.0\ECardManagment.ViewModel.pdb

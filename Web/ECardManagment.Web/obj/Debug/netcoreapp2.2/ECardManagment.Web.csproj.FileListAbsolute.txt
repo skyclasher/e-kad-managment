@@ -1,6 +1,0 @@
-C:\Dev\ECard\e-kad-managment\Web\ECardManagment.Web\obj\Debug\netcoreapp2.2\ECardManagment.Web.csprojAssemblyReference.cache
-C:\Dev\ECard\e-kad-managment\Web\ECardManagment.Web\obj\Debug\netcoreapp2.2\ECardManagment.Web.csproj.CoreCompileInputs.cache
-C:\Dev\ECard\e-kad-managment\Web\ECardManagment.Web\obj\Debug\netcoreapp2.2\ECardManagment.Web.RazorAssemblyInfo.cache
-C:\Dev\ECard\e-kad-managment\Web\ECardManagment.Web\obj\Debug\netcoreapp2.2\ECardManagment.Web.RazorAssemblyInfo.cs
-C:\Dev\ECard\e-kad-managment\Web\ECardManagment.Web\obj\Debug\netcoreapp2.2\ECardManagment.Web.AssemblyInfoInputs.cache
-C:\Dev\ECard\e-kad-managment\Web\ECardManagment.Web\obj\Debug\netcoreapp2.2\ECardManagment.Web.AssemblyInfo.cs

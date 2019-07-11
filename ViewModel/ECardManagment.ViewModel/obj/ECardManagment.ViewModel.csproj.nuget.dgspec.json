@@ -1,0 +1,60 @@
+{
+  "format": 1,
+  "restore": {
+    "D:\\Dev\\Ecard\\ECardManagment\\ViewModel\\ECardManagment.ViewModel\\ECardManagment.ViewModel.csproj": {}
+  },
+  "projects": {
+    "D:\\Dev\\Ecard\\ECardManagment\\ViewModel\\ECardManagment.ViewModel\\ECardManagment.ViewModel.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "D:\\Dev\\Ecard\\ECardManagment\\ViewModel\\ECardManagment.ViewModel\\ECardManagment.ViewModel.csproj",
+        "projectName": "ECardManagment.ViewModel",
+        "projectPath": "D:\\Dev\\Ecard\\ECardManagment\\ViewModel\\ECardManagment.ViewModel\\ECardManagment.ViewModel.csproj",
+        "packagesPath": "C:\\Users\\SYAFIQ-LAPTOP\\.nuget\\packages\\",
+        "outputPath": "D:\\Dev\\Ecard\\ECardManagment\\ViewModel\\ECardManagment.ViewModel\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\SYAFIQ-LAPTOP\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "netstandard2.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "netstandard2.0": {
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "netstandard2.0": {
+          "dependencies": {
+            "NETStandard.Library": {
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[2.0.3, )",
+              "autoReferenced": true
+            }
+          },
+          "imports": [
+            "net461"
+          ],
+          "assetTargetFallback": true,
+          "warn": true
+        }
+      }
+    }
+  }
+}
