@@ -10,3 +10,15 @@ C:\Dev\ECard\e-kad-managment\Shared\ECardManagment.Framework\obj\Debug\netstanda
 C:\Dev\ECard\e-kad-managment\Shared\ECardManagment.Framework\obj\Debug\netstandard2.0\ECardManagment.Framework.csproj.CopyComplete
 C:\Dev\ECard\e-kad-managment\Shared\ECardManagment.Framework\obj\Debug\netstandard2.0\ECardManagment.Framework.dll
 C:\Dev\ECard\e-kad-managment\Shared\ECardManagment.Framework\obj\Debug\netstandard2.0\ECardManagment.Framework.pdb
+D:\Dev\Ecard\ECardManagment\Shared\ECardManagment.Framework\bin\Debug\netstandard2.0\ECardManagment.Framework.deps.json
+D:\Dev\Ecard\ECardManagment\Shared\ECardManagment.Framework\bin\Debug\netstandard2.0\ECardManagment.Framework.dll
+D:\Dev\Ecard\ECardManagment\Shared\ECardManagment.Framework\bin\Debug\netstandard2.0\ECardManagment.Framework.pdb
+D:\Dev\Ecard\ECardManagment\Shared\ECardManagment.Framework\bin\Debug\netstandard2.0\Project.Framework.dll
+D:\Dev\Ecard\ECardManagment\Shared\ECardManagment.Framework\bin\Debug\netstandard2.0\Project.Framework.pdb
+D:\Dev\Ecard\ECardManagment\Shared\ECardManagment.Framework\obj\Debug\netstandard2.0\ECardManagment.Framework.csproj.CoreCompileInputs.cache
+D:\Dev\Ecard\ECardManagment\Shared\ECardManagment.Framework\obj\Debug\netstandard2.0\ECardManagment.Framework.AssemblyInfoInputs.cache
+D:\Dev\Ecard\ECardManagment\Shared\ECardManagment.Framework\obj\Debug\netstandard2.0\ECardManagment.Framework.AssemblyInfo.cs
+D:\Dev\Ecard\ECardManagment\Shared\ECardManagment.Framework\obj\Debug\netstandard2.0\ECardManagment.Framework.csproj.CopyComplete
+D:\Dev\Ecard\ECardManagment\Shared\ECardManagment.Framework\obj\Debug\netstandard2.0\ECardManagment.Framework.dll
+D:\Dev\Ecard\ECardManagment\Shared\ECardManagment.Framework\obj\Debug\netstandard2.0\ECardManagment.Framework.pdb
+D:\Dev\Ecard\ECardManagment\Shared\ECardManagment.Framework\obj\Debug\netstandard2.0\ECardManagment.Framework.csprojAssemblyReference.cache

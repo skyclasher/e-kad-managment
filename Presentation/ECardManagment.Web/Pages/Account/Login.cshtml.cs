@@ -60,7 +60,7 @@ namespace ECardManagment.Web.Pages.Account
             ReturnUrl = returnUrl;
         }
 
-        public IActionResult OnPost(string returnUrl = null)
+        public IActionResult OnPost(string returnUrl = "/Dashboards/Index")
         {
             ReturnUrl = returnUrl;
 

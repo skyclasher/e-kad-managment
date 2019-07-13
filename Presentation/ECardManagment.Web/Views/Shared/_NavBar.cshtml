@@ -28,17 +28,14 @@
         <!-- sidebar menu: : style can be found in sidebar.less -->
         <ul class="sidebar-menu" data-widget="tree">
             <li class="header">MAIN NAVIGATION</li>
-            <li class="treeview @(Html.IsMenuActive("/Dashboards") ? "active" : "")">
-                <a href="#">
+            <li class="@(Html.IsMenuActive("/Dashboards") ? "active" : "")">
+                <a href="~/Dashboards/Index">
                     <i class="fa fa-dashboard"></i> <span>Dashboards</span>
-                    <span class="pull-right-container">
-                        <i class="fa fa-angle-left pull-right"></i>
-                    </span>
                 </a>
-                <ul class="treeview-menu">
-                    @*<li class="@(Html.IsMenuActive("/Dashboards/Dashboard1") ? "active" : "")"><a href="~/Dashboards/Dashboard1"><i class="fa fa-circle-o"></i> Dashboard v1</a></li>*@
+                @*<ul class="treeview-menu">
+                    @*<li class="@(Html.IsMenuActive("/Dashboards/Dashboard1") ? "active" : "")"><a href="~/Dashboards/Dashboard1"><i class="fa fa-circle-o"></i> Dashboard v1</a></li>
                     <li class="@(Html.IsMenuActive("/Dashboards/Dashboard2") ? "active" : "")"><a href="~/Dashboards/Dashboard2"><i class="fa fa-circle-o"></i> Dashboard v2</a></li>
-                </ul>
+                </ul>*@
             </li>
             <li class="treeview @(Html.IsMenuActive("/Settings") ? "active" : "")">
                 <a href="#">

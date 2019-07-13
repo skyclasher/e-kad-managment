@@ -30,3 +30,7 @@ C:\Dev\ECard\e-kad-managment\Process\ECardManagment.Process\obj\Debug\netstandar
 C:\Dev\ECard\e-kad-managment\Process\ECardManagment.Process\obj\Debug\netstandard2.0\ECardManagment.Process.csproj.CopyComplete
 C:\Dev\ECard\e-kad-managment\Process\ECardManagment.Process\obj\Debug\netstandard2.0\ECardManagment.Process.dll
 C:\Dev\ECard\e-kad-managment\Process\ECardManagment.Process\obj\Debug\netstandard2.0\ECardManagment.Process.pdb
+D:\Dev\Ecard\ECardManagment\Process\ECardManagment.Process\bin\Debug\netstandard2.0\ECardManagment.Framework.dll
+D:\Dev\Ecard\ECardManagment\Process\ECardManagment.Process\bin\Debug\netstandard2.0\System.ComponentModel.Annotations.dll
+D:\Dev\Ecard\ECardManagment\Process\ECardManagment.Process\bin\Debug\netstandard2.0\ECardManagment.Framework.pdb
+D:\Dev\Ecard\ECardManagment\Process\ECardManagment.Process\bin\Debug\netstandard2.0\System.ComponentModel.Annotations.xml

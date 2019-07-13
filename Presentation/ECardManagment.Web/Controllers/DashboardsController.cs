@@ -22,7 +22,7 @@ namespace ECardManagment.Web.Controllers
             _dashboardProcess = dashboardProcess;
             _rspvProcess = rsvpProcess;
         }
-        public IActionResult Index()
+        public IActionResult Dashboard2()
         {
             return RedirectToAction("Dashboard1");
         }
@@ -32,7 +32,7 @@ namespace ECardManagment.Web.Controllers
             return View();
         }
 
-        public IActionResult Dashboard2()
+        public IActionResult Index()
         {
             string userId = UserSession.UserId.Value.ToString();
 
@@ -40,7 +40,7 @@ namespace ECardManagment.Web.Controllers
             dashboardVM.RsvpChartVM = _dashboardProcess.GetRsvpChartData(userId);
             dashboardVM.RsvpData = _rspvProcess.GetRsvpByUserId(userId);
             dashboardVM.PagedAttendRsvpData = _rspvProcess.GetPagedAttendRsvpByUserId(userId, string.Empty, 1);
-            return View(dashboardVM);
+            return View(Constant.ViewPath.Dashboard, dashboardVM);
         }
 
 

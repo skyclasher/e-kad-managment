@@ -869,7 +869,6 @@
       "path": "microsoft.netcore.targets/1.1.0",
       "files": [
         ".nupkg.metadata",
-        ".signature.p7s",
         "ThirdPartyNotices.txt",
         "dotnet_library_license.txt",
         "lib/netstandard1.0/_._",
@@ -1124,6 +1123,7 @@
       "path": "system.io/4.3.0",
       "files": [
         ".nupkg.metadata",
+        ".signature.p7s",
         "ThirdPartyNotices.txt",
         "dotnet_library_license.txt",
         "lib/MonoAndroid10/_._",
@@ -1276,6 +1276,7 @@
       "path": "system.reflection/4.3.0",
       "files": [
         ".nupkg.metadata",
+        ".signature.p7s",
         "ThirdPartyNotices.txt",
         "dotnet_library_license.txt",
         "lib/MonoAndroid10/_._",
@@ -1392,7 +1393,6 @@
       "path": "system.reflection.emit.ilgeneration/4.3.0",
       "files": [
         ".nupkg.metadata",
-        ".signature.p7s",
         "ThirdPartyNotices.txt",
         "dotnet_library_license.txt",
         "lib/MonoAndroid10/_._",
@@ -1437,6 +1437,7 @@
       "path": "system.reflection.primitives/4.3.0",
       "files": [
         ".nupkg.metadata",
+        ".signature.p7s",
         "ThirdPartyNotices.txt",
         "dotnet_library_license.txt",
         "lib/MonoAndroid10/_._",
@@ -1493,6 +1494,7 @@
       "path": "system.runtime/4.3.0",
       "files": [
         ".nupkg.metadata",
+        ".signature.p7s",
         "ThirdPartyNotices.txt",
         "dotnet_library_license.txt",
         "lib/MonoAndroid10/_._",
@@ -1609,6 +1611,7 @@
       "path": "system.text.encoding/4.3.0",
       "files": [
         ".nupkg.metadata",
+        ".signature.p7s",
         "ThirdPartyNotices.txt",
         "dotnet_library_license.txt",
         "lib/MonoAndroid10/_._",
@@ -1695,6 +1698,7 @@
       "path": "system.threading.tasks/4.3.0",
       "files": [
         ".nupkg.metadata",
+        ".signature.p7s",
         "ThirdPartyNotices.txt",
         "dotnet_library_license.txt",
         "lib/MonoAndroid10/_._",
@@ -1769,27 +1773,24 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\asyaf\\.nuget\\packages\\": {},
-    "C:\\Microsoft\\Xamarin\\NuGet\\": {},
+    "C:\\Users\\SYAFIQ-LAPTOP\\.nuget\\packages\\": {},
     "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Dev\\ECard\\e-kad-managment\\ViewModel\\ECardManagment.ViewModel\\ECardManagment.ViewModel.csproj",
+      "projectUniqueName": "D:\\Dev\\Ecard\\ECardManagment\\ViewModel\\ECardManagment.ViewModel\\ECardManagment.ViewModel.csproj",
       "projectName": "ECardManagment.ViewModel",
-      "projectPath": "C:\\Dev\\ECard\\e-kad-managment\\ViewModel\\ECardManagment.ViewModel\\ECardManagment.ViewModel.csproj",
-      "packagesPath": "C:\\Users\\asyaf\\.nuget\\packages\\",
-      "outputPath": "C:\\Dev\\ECard\\e-kad-managment\\ViewModel\\ECardManagment.ViewModel\\obj\\",
+      "projectPath": "D:\\Dev\\Ecard\\ECardManagment\\ViewModel\\ECardManagment.ViewModel\\ECardManagment.ViewModel.csproj",
+      "packagesPath": "C:\\Users\\SYAFIQ-LAPTOP\\.nuget\\packages\\",
+      "outputPath": "D:\\Dev\\Ecard\\ECardManagment\\ViewModel\\ECardManagment.ViewModel\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
-        "C:\\Microsoft\\Xamarin\\NuGet\\",
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
       ],
       "configFilePaths": [
-        "C:\\Users\\asyaf\\AppData\\Roaming\\NuGet\\NuGet.Config",
-        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
-        "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
+        "C:\\Users\\SYAFIQ-LAPTOP\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
         "netstandard2.0"
@@ -1801,8 +1802,8 @@
       "frameworks": {
         "netstandard2.0": {
           "projectReferences": {
-            "C:\\Dev\\Project\\project-helper\\Project.Framework.csproj": {
-              "projectPath": "C:\\Dev\\Project\\project-helper\\Project.Framework.csproj"
+            "D:\\Dev\\Project\\project-helper\\Project.Framework.csproj": {
+              "projectPath": "D:\\Dev\\Project\\project-helper\\Project.Framework.csproj"
             }
           }
         }

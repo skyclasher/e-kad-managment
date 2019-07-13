@@ -9,7 +9,8 @@ namespace ECardManagment.Framework.Constants
     {
         public class ViewPath
         {
-            public const string RsvpListing = "~/Views/Dashboards/Rsvp/_List.cshtml";
+            public const string RsvpListing = "~/Views/Dashboards/Rsvp/_List.cshtml"; 
+            public const string Dashboard = "~/Views/Dashboards/Dashboard2.cshtml"; 
         }
 
         public class Controller
