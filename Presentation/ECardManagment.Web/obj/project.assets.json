@@ -15,6 +15,19 @@
           "lib/netstandard2.0/AutoMapper.dll": {}
         }
       },
+      "AutoMapper.Extensions.Microsoft.DependencyInjection/6.1.1": {
+        "type": "package",
+        "dependencies": {
+          "AutoMapper": "8.1.1",
+          "Microsoft.Extensions.DependencyInjection.Abstractions": "2.0.0"
+        },
+        "compile": {
+          "lib/netstandard2.0/AutoMapper.Extensions.Microsoft.DependencyInjection.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.0/AutoMapper.Extensions.Microsoft.DependencyInjection.dll": {}
+        }
+      },
       "BuildBundlerMinifier/2.8.391": {
         "type": "package",
         "build": {
@@ -4535,11 +4548,24 @@
           "lib/netstandard1.3/System.Xml.XPath.XDocument.dll": {}
         }
       },
+      "ECardManagment.Framework/1.0.0": {
+        "type": "project",
+        "framework": ".NETStandard,Version=v2.0",
+        "dependencies": {
+          "Project.Framework": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/ECardManagment.Framework.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/ECardManagment.Framework.dll": {}
+        }
+      },
       "ECardManagment.Process/1.0.0": {
         "type": "project",
         "framework": ".NETStandard,Version=v2.0",
         "dependencies": {
-          "AutoMapper": "8.1.1",
+          "ECardManagment.Framework": "1.0.0",
           "ECardManagment.ViewModel": "1.0.0",
           "Project.Framework": "1.0.0"
         },
@@ -4553,6 +4579,9 @@
       "ECardManagment.ViewModel/1.0.0": {
         "type": "project",
         "framework": ".NETStandard,Version=v2.0",
+        "dependencies": {
+          "Project.Framework": "1.0.0"
+        },
         "compile": {
           "bin/placeholder/ECardManagment.ViewModel.dll": {}
         },
@@ -4560,11 +4589,28 @@
           "bin/placeholder/ECardManagment.ViewModel.dll": {}
         }
       },
+      "Project.AspNetCore.JwtSecurity/1.0.1": {
+        "type": "project",
+        "framework": ".NETStandard,Version=v2.0",
+        "dependencies": {
+          "Microsoft.AspNetCore.Authentication.JwtBearer": "2.1.1",
+          "Microsoft.Extensions.DependencyInjection.Abstractions": "2.1.1",
+          "Project.JwtSecurity": "1.0.1"
+        },
+        "compile": {
+          "bin/placeholder/Project.AspNetCore.JwtSecurity.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Project.AspNetCore.JwtSecurity.dll": {}
+        }
+      },
       "Project.Framework/1.0.0": {
         "type": "project",
         "framework": ".NETStandard,Version=v2.0",
         "dependencies": {
+          "AutoMapper": "8.1.1",
           "ElmahCore": "1.2.5",
+          "Microsoft.AspNetCore.Http.Extensions": "2.2.0",
           "Microsoft.CSharp": "4.5.0",
           "Newtonsoft.Json": "12.0.2",
           "RestSharp": "106.6.10",
@@ -4575,6 +4621,19 @@
         },
         "runtime": {
           "bin/placeholder/Project.Framework.dll": {}
+        }
+      },
+      "Project.JwtSecurity/1.0.1": {
+        "type": "project",
+        "framework": ".NETStandard,Version=v2.0",
+        "dependencies": {
+          "System.IdentityModel.Tokens.Jwt": "5.2.4"
+        },
+        "compile": {
+          "bin/placeholder/Project.JwtSecurity.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Project.JwtSecurity.dll": {}
         }
       }
     }
@@ -4595,6 +4654,19 @@
         "lib/netstandard2.0/AutoMapper.dll",
         "lib/netstandard2.0/AutoMapper.pdb",
         "lib/netstandard2.0/AutoMapper.xml"
+      ]
+    },
+    "AutoMapper.Extensions.Microsoft.DependencyInjection/6.1.1": {
+      "sha512": "MPMgL6JGEH2Egmgh3+tw2UVX05ph8As7YtYWzt2ZDCc0STHGG5EsV3UMWH/g4aHaN1q20Bbc0PTMy3I0PwgBGQ==",
+      "type": "package",
+      "path": "automapper.extensions.microsoft.dependencyinjection/6.1.1",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "automapper.extensions.microsoft.dependencyinjection.6.1.1.nupkg.sha512",
+        "automapper.extensions.microsoft.dependencyinjection.nuspec",
+        "lib/netstandard2.0/AutoMapper.Extensions.Microsoft.DependencyInjection.dll",
+        "lib/netstandard2.0/AutoMapper.Extensions.Microsoft.DependencyInjection.pdb"
       ]
     },
     "BuildBundlerMinifier/2.8.391": {
@@ -7644,7 +7716,7 @@
       ]
     },
     "runtime.fedora.24-x64.runtime.native.System.Security.Cryptography.OpenSsl/4.3.0": {
-      "sha512": "LdIvj7Bi2jiaNTqY/ezZGVXHe1KI5fjLSI026O1TjVzsmdgTP/zTF+f3nwHCjwttyhsPBEiswv0PekimPWZwWg==",
+      "sha512": "c3YNH1GQJbfIPJeCnr4avseugSqPrxwIqzthYyZDN6EuOyNOzq+y2KSUfRcXauya1sF4foESTgwM5e1A8arAKw==",
       "type": "package",
       "path": "runtime.fedora.24-x64.runtime.native.system.security.cryptography.openssl/4.3.0",
       "files": [
@@ -7685,7 +7757,7 @@
       ]
     },
     "runtime.native.System.IO.Compression/4.3.0": {
-      "sha512": "b+V9JC/Ii3sR659flBeaBJww111425tgjcDS1k+hqV4sGh9FALRDBvJnDtQ895gAzpPTUOFDHdqaZ2Et7BpZMg==",
+      "sha512": "INBPonS5QPEgn7naufQFXJEp3zX6L4bwHgJ/ZH78aBTpeNfQMtf7C6VrAFhlq2xxWBveIOWyFzQjJ8XzHMhdOQ==",
       "type": "package",
       "path": "runtime.native.system.io.compression/4.3.0",
       "files": [
@@ -7765,11 +7837,12 @@
       ]
     },
     "runtime.osx.10.10-x64.runtime.native.System.Security.Cryptography.Apple/4.3.0": {
-      "sha512": "Kh9W4agE0r/hK8AX1LvyQI2NrKHBL8pO0gRoDTdDb0LL6Ta1Z2OtFx3lOaAE0ZpCUc/dt9Wzs3rA7a3IsKdOVA==",
+      "sha512": "kVXCuMTrTlxq4XOOMAysuNwsXWpYeboGddNGpIgNSZmv1b6r/s/DPk0fYMB7Q5Qo4bY68o48jt4T4y5BVecbCQ==",
       "type": "package",
       "path": "runtime.osx.10.10-x64.runtime.native.system.security.cryptography.apple/4.3.0",
       "files": [
         ".nupkg.metadata",
+        ".signature.p7s",
         "ThirdPartyNotices.txt",
         "dotnet_library_license.txt",
         "runtime.osx.10.10-x64.runtime.native.system.security.cryptography.apple.4.3.0.nupkg.sha512",
@@ -7804,7 +7877,7 @@
       ]
     },
     "runtime.ubuntu.14.04-x64.runtime.native.System.Security.Cryptography.OpenSsl/4.3.0": {
-      "sha512": "JGc0pAWRE8lB4Ucygk2pYSKbUPLlAIq6Bczf5/WF2D/VKJEPtYlVUMxk8fbl1zRfTWzSHi+VcFZlaPlWiNxeKg==",
+      "sha512": "ytoewC6wGorL7KoCAvRfsgoJPJbNq+64k2SqW6JcOAebWsFUvCCYgfzQMrnpvPiEl4OrblUlhF2ji+Q1+SVLrQ==",
       "type": "package",
       "path": "runtime.ubuntu.14.04-x64.runtime.native.system.security.cryptography.openssl/4.3.0",
       "files": [
@@ -8221,7 +8294,7 @@
       ]
     },
     "System.Collections.Specialized/4.3.0": {
-      "sha512": "NoPBj0ykejqAWW4p4gGtrrL+3c84ZLSvGnHgq422ew1Rj4WKj1FA8/BCybqC111EtgcqUl6ZJNFYYS22HLgbjA==",
+      "sha512": "Epx8PoVZR0iuOnJJDzp7pWvdfMMOAvpUo95pC4ScH2mJuXkKA2Y4aR3cG9qt2klHgSons1WFh4kcGW7cSXvrxg==",
       "type": "package",
       "path": "system.collections.specialized/4.3.0",
       "files": [
@@ -10751,7 +10824,7 @@
       ]
     },
     "System.Runtime.Serialization.Primitives/4.3.0": {
-      "sha512": "2Z5t70a2SwMsfQDp9KOclaZNyQhfIga2gppq9lIUDM1A4ohTshn4JqT7ir8bvIhXgorWKYDAr6rPzEbi/nTGKg==",
+      "sha512": "Wz+0KOukJGAlXjtKr+5Xpuxf8+c8739RI1C+A2BoQZT+wMCCoMDDdO8/4IRHfaVINqL78GO8dW8G2lW/e45Mcw==",
       "type": "package",
       "path": "system.runtime.serialization.primitives/4.3.0",
       "files": [
@@ -11077,7 +11150,7 @@
       ]
     },
     "System.Security.Cryptography.Csp/4.3.0": {
-      "sha512": "yO2k5o+Z+DiFRBvvB9vdRRAGHi6bm02M9OWXfCqQ8K0UxD3Woc3svQheZfb7PoTEFs0kGacO0IzzMWsb6Mkeow==",
+      "sha512": "X4s/FCkEUnRGnwR3aSfVIkldBmtURMhmexALNTwpjklzxWU7yjMk7GHLKOZTNkgnWnE0q7+BCf9N2LVRWxewaA==",
       "type": "package",
       "path": "system.security.cryptography.csp/4.3.0",
       "files": [
@@ -11148,7 +11221,7 @@
       ]
     },
     "System.Security.Cryptography.OpenSsl/4.3.0": {
-      "sha512": "vOYy7Jv9KsG3ld2hLt0GoERd82SZi4BelrbXLwI9yFBYX7kpbvUCWYo4eyevk47cuJXZ9ZLVAryANcc7iY71aA==",
+      "sha512": "h4CEgOgv5PKVF/HwaHzJRiVboL2THYCou97zpmhjghx5frc7fIvlkY1jL+lnIQyChrJDMNEXS6r7byGif8Cy4w==",
       "type": "package",
       "path": "system.security.cryptography.openssl/4.3.0",
       "files": [
@@ -12337,6 +12410,11 @@
         "system.xml.xpath.xdocument.nuspec"
       ]
     },
+    "ECardManagment.Framework/1.0.0": {
+      "type": "project",
+      "path": "../../Shared/ECardManagment.Framework/ECardManagment.Framework.csproj",
+      "msbuildProject": "../../Shared/ECardManagment.Framework/ECardManagment.Framework.csproj"
+    },
     "ECardManagment.Process/1.0.0": {
       "type": "project",
       "path": "../../Process/ECardManagment.Process/ECardManagment.Process.csproj",
@@ -12347,42 +12425,58 @@
       "path": "../../ViewModel/ECardManagment.ViewModel/ECardManagment.ViewModel.csproj",
       "msbuildProject": "../../ViewModel/ECardManagment.ViewModel/ECardManagment.ViewModel.csproj"
     },
+    "Project.AspNetCore.JwtSecurity/1.0.1": {
+      "type": "project",
+      "path": "../../../../Project/project-jwt-security/Aloji.AspNetCore.JwtSecurity/Project.AspNetCore.JwtSecurity.csproj",
+      "msbuildProject": "../../../../Project/project-jwt-security/Aloji.AspNetCore.JwtSecurity/Project.AspNetCore.JwtSecurity.csproj"
+    },
     "Project.Framework/1.0.0": {
       "type": "project",
-      "path": "../../../../Project/Project.Framework/Project.Framework.csproj",
-      "msbuildProject": "../../../../Project/Project.Framework/Project.Framework.csproj"
+      "path": "../../../../Project/project-helper/Project.Framework.csproj",
+      "msbuildProject": "../../../../Project/project-helper/Project.Framework.csproj"
+    },
+    "Project.JwtSecurity/1.0.1": {
+      "type": "project",
+      "path": "../../../../Project/project-jwt-security/Aloji.JwtSecurity/Project.JwtSecurity.csproj",
+      "msbuildProject": "../../../../Project/project-jwt-security/Aloji.JwtSecurity/Project.JwtSecurity.csproj"
     }
   },
   "projectFileDependencyGroups": {
     ".NETCoreApp,Version=v2.2": [
+      "AutoMapper >= 8.1.1",
+      "AutoMapper.Extensions.Microsoft.DependencyInjection >= 6.1.1",
       "BuildBundlerMinifier >= 2.8.391",
       "ECardManagment.Process >= 1.0.0",
       "Microsoft.AspNetCore.App >= 2.2.0",
       "Microsoft.AspNetCore.Razor.Design >= 2.2.0",
       "Microsoft.NETCore.App >= 2.2.0",
+      "Project.AspNetCore.JwtSecurity >= 1.0.1",
       "Project.Framework >= 1.0.0",
       "Sendgrid >= 9.9.0"
     ]
   },
   "packageFolders": {
-    "C:\\Users\\SYAFIQ-LAPTOP\\.nuget\\packages\\": {},
+    "C:\\Users\\asyaf\\.nuget\\packages\\": {},
+    "C:\\Microsoft\\Xamarin\\NuGet\\": {},
     "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\Dev\\Ecard\\ECardManagment\\Presentation\\ECardManagment.Web\\ECardManagment.Web.csproj",
+      "projectUniqueName": "C:\\Dev\\ECard\\e-kad-managment\\Presentation\\ECardManagment.Web\\ECardManagment.Web.csproj",
       "projectName": "ECardManagment.Web",
-      "projectPath": "D:\\Dev\\Ecard\\ECardManagment\\Presentation\\ECardManagment.Web\\ECardManagment.Web.csproj",
-      "packagesPath": "C:\\Users\\SYAFIQ-LAPTOP\\.nuget\\packages\\",
-      "outputPath": "D:\\Dev\\Ecard\\ECardManagment\\Presentation\\ECardManagment.Web\\obj\\",
+      "projectPath": "C:\\Dev\\ECard\\e-kad-managment\\Presentation\\ECardManagment.Web\\ECardManagment.Web.csproj",
+      "packagesPath": "C:\\Users\\asyaf\\.nuget\\packages\\",
+      "outputPath": "C:\\Dev\\ECard\\e-kad-managment\\Presentation\\ECardManagment.Web\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
+        "C:\\Microsoft\\Xamarin\\NuGet\\",
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
       ],
       "configFilePaths": [
-        "C:\\Users\\SYAFIQ-LAPTOP\\AppData\\Roaming\\NuGet\\NuGet.Config",
-        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        "C:\\Users\\asyaf\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
       ],
       "originalTargetFrameworks": [
         "netcoreapp2.2"
@@ -12394,11 +12488,14 @@
       "frameworks": {
         "netcoreapp2.2": {
           "projectReferences": {
-            "D:\\Dev\\Ecard\\ECardManagment\\Process\\ECardManagment.Process\\ECardManagment.Process.csproj": {
-              "projectPath": "D:\\Dev\\Ecard\\ECardManagment\\Process\\ECardManagment.Process\\ECardManagment.Process.csproj"
+            "C:\\Dev\\ECard\\e-kad-managment\\Process\\ECardManagment.Process\\ECardManagment.Process.csproj": {
+              "projectPath": "C:\\Dev\\ECard\\e-kad-managment\\Process\\ECardManagment.Process\\ECardManagment.Process.csproj"
             },
-            "D:\\Dev\\Project\\Project.Framework\\Project.Framework.csproj": {
-              "projectPath": "D:\\Dev\\Project\\Project.Framework\\Project.Framework.csproj"
+            "C:\\Dev\\Project\\project-helper\\Project.Framework.csproj": {
+              "projectPath": "C:\\Dev\\Project\\project-helper\\Project.Framework.csproj"
+            },
+            "C:\\Dev\\Project\\project-jwt-security\\Aloji.AspNetCore.JwtSecurity\\Project.AspNetCore.JwtSecurity.csproj": {
+              "projectPath": "C:\\Dev\\Project\\project-jwt-security\\Aloji.AspNetCore.JwtSecurity\\Project.AspNetCore.JwtSecurity.csproj"
             }
           }
         }
@@ -12412,6 +12509,14 @@
     "frameworks": {
       "netcoreapp2.2": {
         "dependencies": {
+          "AutoMapper": {
+            "target": "Package",
+            "version": "[8.1.1, )"
+          },
+          "AutoMapper.Extensions.Microsoft.DependencyInjection": {
+            "target": "Package",
+            "version": "[6.1.1, )"
+          },
           "BuildBundlerMinifier": {
             "target": "Package",
             "version": "[2.8.391, )"

@@ -1,5 +1,5 @@
 ﻿@page
-@model ECardManagment.ViewModel.Users.WebUserVM
+@model LoginModel
 
 @inject Microsoft.Extensions.Configuration.IConfiguration Configuration
 
@@ -11,14 +11,14 @@
         <p class="login-box-msg">Sign in to start your session</p>
         <form method="post">
             <div class="form-group has-feedback">
-                <input asp-for="@Model.Username" type="text" class="form-control" placeholder="Email">
+                <input asp-for="WebUserVM.Username" type="text" class="form-control" placeholder="Email">
                 <span class="glyphicon glyphicon-envelope form-control-feedback"></span>
-                <span asp-validation-for="@Model.Username" class="help-block"></span>
+                <span asp-validation-for="WebUserVM.Username" class="help-block"></span>
             </div>
             <div class="form-group has-feedback">
-                <input asp-for="@Model.Password" type="password" class="form-control" placeholder="Password">
+                <input asp-for="WebUserVM.Password" type="password" class="form-control" placeholder="Password">
                 <span class="glyphicon glyphicon-lock form-control-feedback"></span>
-                <span asp-validation-for="@Model.Password" class="help-block"></span>
+                <span asp-validation-for="WebUserVM.Password" class="help-block"></span>
                 <div asp-validation-summary="ModelOnly" class="text-danger"></div>
             </div>
             <div class="row">

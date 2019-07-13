@@ -6,3 +6,17 @@ D:\Dev\Ecard\ECardManagment\ViewModel\ECardManagment.ViewModel\obj\Debug\netstan
 D:\Dev\Ecard\ECardManagment\ViewModel\ECardManagment.ViewModel\obj\Debug\netstandard2.0\ECardManagment.ViewModel.AssemblyInfo.cs
 D:\Dev\Ecard\ECardManagment\ViewModel\ECardManagment.ViewModel\obj\Debug\netstandard2.0\ECardManagment.ViewModel.dll
 D:\Dev\Ecard\ECardManagment\ViewModel\ECardManagment.ViewModel\obj\Debug\netstandard2.0\ECardManagment.ViewModel.pdb
+C:\Dev\ECard\e-kad-managment\ViewModel\ECardManagment.ViewModel\bin\Debug\netstandard2.0\ECardManagment.ViewModel.deps.json
+C:\Dev\ECard\e-kad-managment\ViewModel\ECardManagment.ViewModel\bin\Debug\netstandard2.0\ECardManagment.ViewModel.dll
+C:\Dev\ECard\e-kad-managment\ViewModel\ECardManagment.ViewModel\bin\Debug\netstandard2.0\ECardManagment.ViewModel.pdb
+C:\Dev\ECard\e-kad-managment\ViewModel\ECardManagment.ViewModel\bin\Debug\netstandard2.0\System.ComponentModel.Annotations.dll
+C:\Dev\ECard\e-kad-managment\ViewModel\ECardManagment.ViewModel\bin\Debug\netstandard2.0\System.ComponentModel.Annotations.xml
+C:\Dev\ECard\e-kad-managment\ViewModel\ECardManagment.ViewModel\obj\Debug\netstandard2.0\ECardManagment.ViewModel.csprojAssemblyReference.cache
+C:\Dev\ECard\e-kad-managment\ViewModel\ECardManagment.ViewModel\obj\Debug\netstandard2.0\ECardManagment.ViewModel.csproj.CoreCompileInputs.cache
+C:\Dev\ECard\e-kad-managment\ViewModel\ECardManagment.ViewModel\obj\Debug\netstandard2.0\ECardManagment.ViewModel.AssemblyInfoInputs.cache
+C:\Dev\ECard\e-kad-managment\ViewModel\ECardManagment.ViewModel\obj\Debug\netstandard2.0\ECardManagment.ViewModel.AssemblyInfo.cs
+C:\Dev\ECard\e-kad-managment\ViewModel\ECardManagment.ViewModel\obj\Debug\netstandard2.0\ECardManagment.ViewModel.csproj.CopyComplete
+C:\Dev\ECard\e-kad-managment\ViewModel\ECardManagment.ViewModel\obj\Debug\netstandard2.0\ECardManagment.ViewModel.dll
+C:\Dev\ECard\e-kad-managment\ViewModel\ECardManagment.ViewModel\obj\Debug\netstandard2.0\ECardManagment.ViewModel.pdb
+C:\Dev\ECard\e-kad-managment\ViewModel\ECardManagment.ViewModel\bin\Debug\netstandard2.0\Project.Framework.dll
+C:\Dev\ECard\e-kad-managment\ViewModel\ECardManagment.ViewModel\bin\Debug\netstandard2.0\Project.Framework.pdb

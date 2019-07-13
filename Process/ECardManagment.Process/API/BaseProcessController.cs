@@ -1,20 +1,19 @@
-﻿using Project.Framework.Interfaces;
-using System;
-using System.Collections.Generic;
+﻿using ECardManagment.Framework.Helpers;
+using Microsoft.Extensions.Options;
 using System.Text;
 
 namespace ECardManagment.Process.API
 {
     public abstract class BaseProcessController
     {
-        private readonly IAppSetting _setting;
+        private readonly IOptions<AppSettings> _setting;
 
-        protected virtual string WebAPIUrl => _setting.WebAPIUrl;
-        protected virtual string AuthWebAPIUrl => _setting.AuthWebAPIUrl;
+        protected virtual string WebAPIUrl => _setting.Value.WebAPIUrl;
+        protected virtual string AuthWebAPIUrl => _setting.Value.AuthWebAPIUrl;
 
         //protected virtual string SharedFolder => _setting.SharedFolder;
 
-        protected BaseProcessController(IAppSetting setting)
+        protected BaseProcessController(IOptions<AppSettings> setting)
         {
             _setting = setting;
         }

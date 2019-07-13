@@ -1,24 +1,18 @@
-using System;
-using System.Collections.Generic;
-using System.ComponentModel.DataAnnotations;
-using System.Threading.Tasks;
+using ECardManagment.Web.Services.Mail;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
-using ECardManagment.Data;
-using ECardManagment.Services;
-using ECardManagment.Services.Mail;
+using System.ComponentModel.DataAnnotations;
+using System.Threading.Tasks;
 
 namespace ECardManagment.Web.Pages.Account
 {
     public class ForgotPasswordModel : PageModel
     {
-        private readonly UserManager<ApplicationUser> _userManager;
         private readonly IMailManager _emailSender;
 
-        public ForgotPasswordModel(UserManager<ApplicationUser> userManager, IMailManager emailSender)
+        public ForgotPasswordModel(IMailManager emailSender)
         {
-            _userManager = userManager;
             _emailSender = emailSender;
         }
 
@@ -36,18 +30,18 @@ namespace ECardManagment.Web.Pages.Account
         {
             if (ModelState.IsValid)
             {
-                var user = await _userManager.FindByEmailAsync(Input.Email);
-                if (user == null || !(await _userManager.IsEmailConfirmedAsync(user)))
-                {
-                    // Don't reveal that the user does not exist or is not confirmed
-                    return RedirectToPage("./ForgotPasswordConfirmation");
-                }
+                //var user = await _userManager.FindByEmailAsync(Input.Email);
+                //if (user == null || !(await _userManager.IsEmailConfirmedAsync(user)))
+                //{
+                //    // Don't reveal that the user does not exist or is not confirmed
+                //    return RedirectToPage("./ForgotPasswordConfirmation");
+                //}
 
-                // For more information on how to enable account confirmation and password reset please 
-                // visit https://go.microsoft.com/fwlink/?LinkID=532713
-                var code = await _userManager.GeneratePasswordResetTokenAsync(user);
-                var callbackUrl = Url.ResetPasswordCallbackLink(user.Id, code, Request.Scheme);
-                await _emailSender.SendResetPasswordAsync(Input.Email, callbackUrl);
+                //// For more information on how to enable account confirmation and password reset please 
+                //// visit https://go.microsoft.com/fwlink/?LinkID=532713
+                //var code = await _userManager.GeneratePasswordResetTokenAsync(user);
+                //var callbackUrl = Url.ResetPasswordCallbackLink(user.Id, code, Request.Scheme);
+                //await _emailSender.SendResetPasswordAsync(Input.Email, callbackUrl);
                 return RedirectToPage("./ForgotPasswordConfirmation");
             }
 

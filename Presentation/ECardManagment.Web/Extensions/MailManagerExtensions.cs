@@ -1,9 +1,6 @@
-using System;
-using System.Collections.Generic;
-using System.Linq;
+using ECardManagment.Web.Services.Mail;
 using System.Text.Encodings.Web;
 using System.Threading.Tasks;
-using ECardManagment.Services.Mail;
 
 namespace Microsoft.AspNetCore.Mvc
 {

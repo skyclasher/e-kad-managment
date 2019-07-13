@@ -38,6 +38,24 @@
         <link rel="stylesheet" href="~/css/site.min.css" asp-append-version="true" />
     </environment>
 
+    <!-- ./wrapper -->
+    <!-- jQuery -->
+    <script src="~/libs/jquery/jquery.min.js"></script>
+    <!-- Bootstrap 3.3.7 -->
+    <script src="~/libs/bootstrap/js/bootstrap.min.js"></script>
+
+    @RenderSection("Scripts", required: false)
+
+    <!-- SlimScroll -->
+    <script src="~/libs/jquery-slimscroll/jquery.slimscroll.min.js"></script>
+    <!-- FastClick -->
+    <script src="~/libs/fastclick/fastclick.min.js"></script>
+    <!-- AdminLTE App -->
+    <script src="~/libs/admin-lte/js/adminlte.min.js"></script>
+    <!-- AdminLTE for demo purposes -->
+    <script src="~/libs/admin-lte/js/demo.js"></script>
+
+    <script src="~/plugins/twbs-pagination/jquery.twbsPagination.min.js"></script>
 
 </head>
 <body class="hold-transition skin-blue sidebar-mini fixed">
@@ -68,22 +86,6 @@
         <!-- Control Sidebar -->
         @await Html.PartialAsync("_SideBar")
     </div>
-    <!-- ./wrapper -->
-    <!-- jQuery -->
-    <script src="~/libs/jquery/jquery.min.js"></script>
-    <!-- Bootstrap 3.3.7 -->
-    <script src="~/libs/bootstrap/js/bootstrap.min.js"></script>
-
-    @RenderSection("Scripts", required: false)
-
-    <!-- SlimScroll -->
-    <script src="~/libs/jquery-slimscroll/jquery.slimscroll.min.js"></script>
-    <!-- FastClick -->
-    <script src="~/libs/fastclick/fastclick.min.js"></script>
-    <!-- AdminLTE App -->
-    <script src="~/libs/admin-lte/js/adminlte.min.js"></script>
-    <!-- AdminLTE for demo purposes -->
-    <script src="~/libs/admin-lte/js/demo.js"></script>
     
     <!-- ASP.NET site script -->
     <environment include="Development">

@@ -1,6 +1,6 @@
 ﻿using Project.Framework.Configuration;
 
-namespace ECardManagment.Web.Helpers
+namespace ECardManagment.Framework.Helpers
 {
     public class AppSettings : BaseAppSetting
     {

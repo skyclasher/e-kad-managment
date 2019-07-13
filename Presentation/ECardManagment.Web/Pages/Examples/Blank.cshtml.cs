@@ -1,12 +1,9 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
-using Microsoft.AspNetCore.Mvc;
+﻿using ECardManagment.Extensions.Filter;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 
 namespace ECardManagment.Web.Pages.Examples
 {
+    [ValidateToken]
     public class BlankModel : PageModel
     {
         public void OnGet()

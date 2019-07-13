@@ -1,15 +1,12 @@
-<Project Sdk="Microsoft.NET.Sdk">
+﻿<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
     <TargetFramework>netstandard2.0</TargetFramework>
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="AutoMapper" Version="8.1.1" />
-  </ItemGroup>
-
-  <ItemGroup>
-    <ProjectReference Include="..\..\..\..\Project\Project.Framework\Project.Framework.csproj" />
+    <ProjectReference Include="..\..\..\..\Project\project-helper\Project.Framework.csproj" />
+    <ProjectReference Include="..\..\Shared\ECardManagment.Framework\ECardManagment.Framework.csproj" />
     <ProjectReference Include="..\..\ViewModel\ECardManagment.ViewModel\ECardManagment.ViewModel.csproj" />
   </ItemGroup>
 

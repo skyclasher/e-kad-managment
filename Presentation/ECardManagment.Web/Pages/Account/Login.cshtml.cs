@@ -1,13 +1,11 @@
+using ECardManagment.Extensions.Filter;
 using ECardManagment.Process.API.Auths;
 using ECardManagment.ViewModel.Users;
 using Microsoft.AspNetCore.Authentication;
-using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 using Microsoft.Extensions.Logging;
 using System.Collections.Generic;
-using System.ComponentModel.DataAnnotations;
-using System.Linq;
 using System.Threading.Tasks;
 
 namespace ECardManagment.Web.Pages.Account
@@ -55,7 +53,7 @@ namespace ECardManagment.Web.Pages.Account
             }
 
             // Clear the existing external cookie to ensure a clean login process
-            await HttpContext.SignOutAsync(IdentityConstants.ExternalScheme);
+            //await HttpContext.SignOutAsync(IdentityConstants.ExternalScheme);
 
             //ExternalLogins = (await _signInManager.GetExternalAuthenticationSchemesAsync()).ToList();
 
@@ -68,20 +66,13 @@ namespace ECardManagment.Web.Pages.Account
 
             if (ModelState.IsValid)
             {
-                ClaimVM claim = _authProcess.Login(WebUserVM);
+                string token = _authProcess.Login(WebUserVM);
 
-                if (claim != null)
+                if (!string.IsNullOrEmpty(token))
                 {
-                    if (!string.IsNullOrEmpty(claim.Token))
-                    {
-                        _logger.LogInformation("User logged in.");
-                        return LocalRedirect(Url.GetLocalUrl(returnUrl));
-                    }
-                    else
-                    {
-                        ModelState.AddModelError(string.Empty, "Email or password is incorrect.");
-                        return Page();
-                    }
+                    _authProcess.GetClaimDetails(token);
+                    _logger.LogInformation("User logged in.");
+                    return LocalRedirect(Url.GetLocalUrl(returnUrl));
                 }
                 else
                 {

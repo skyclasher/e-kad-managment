@@ -1,0 +1,108 @@
+﻿@using Project.Framework.Helper
+@using ECardManagment.Framework.Constants
+@using ProjectConstant = Project.Framework.Constants;
+@model PagingHelper<ECardManagment.ViewModel.Rsvps.RsvpVM>
+
+<div id="resultTable">
+    <div class="row">
+        <div class="col-md-12">
+            <div id="resultTable">
+                <div class="input-group">
+                    @Html.TextBoxFor(model => model.SearchText, new { @class = "form-control", @placeholder = "Search..." })
+                    <div class="input-group-btn">
+                        <a class="btn btn-default" onclick="GetPagingResult(1);"><i class="fa fa-search"></i></a>
+                    </div>
+                </div>
+                <br />
+                <table class="table table-bordered table-hover table-responsive">
+                    <thead>
+                        <tr>
+                            <th width="20%">Nama</th>
+                            <th width="5%">Bil. Hadir</th>
+                            <th>Ucapan</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        @if (Model.ListData.Count() > 0)
+                        {
+                            @foreach (var rsvp in Model.ListData.Where(y => y.Attendance == "H").OrderBy(x => x.Name))
+                            {
+                                <tr>
+                                    <td class="text-blue">
+                                        @Html.DisplayFor(model => rsvp.Name)
+                                    </td>
+                                    <td class="text-blue">
+                                        @Html.DisplayFor(model => rsvp.AttCount)
+                                    </td>
+                                    <td class="text-blue">
+                                        @Html.DisplayFor(model => rsvp.Wishes)
+                                    </td>
+                                </tr>
+                            }
+                        }
+                        else
+                        {
+                            <tr class="center"><td colspan="4">No rsvp records were found.</td></tr>
+                        }
+                    </tbody>
+                </table>
+            </div>
+            <div class="pull-right">
+                <ul class="pagination pagination-sm no-margin pull-right" id="pagination"></ul>
+            </div>
+        </div>
+        <!-- /.col -->
+    </div>
+    <!-- /.row -->
+</div>
+
+<script type="text/javascript">
+     $('#SearchText').keypress(function (e) {
+            if (e.which == 13) {
+                GetPagingResult(1);
+            }
+        });
+
+        var totalPages = @Model.PageCount;
+
+        if (totalPages == 0)
+            totalPages = 1
+
+        $('#pagination').twbsPagination({
+            startPage: @Model.CurrentPage,
+            totalPages: totalPages,
+            visiblePages: 5,
+            initiateStartPageClick: false,
+            onPageClick: function (event, page) {
+                GetPagingResult(page);
+            }
+        });
+
+        function GetPagingResult(page) {
+            var searchText = $('#SearchText').val();
+
+            var params = {
+                currentPage: page,
+                searchText: searchText
+            };
+
+            $.ajax({
+                type: 'GET',
+                url: '@Url.Action(Constant.Action.GetPagedRsvp, Constant.Controller.Dashboard)',
+                data: params,
+                success: function (data) {
+                    $("#resultTable").html(data);
+                },
+                beforeSend: function () {
+                    $("#overlay").show();
+                },
+                complete: function () {
+                    $("#overlay").hide();
+                    $('#SearchText').focus().select();
+                },
+                error: function () {
+                    alert("@ProjectConstant.Constant.Error.FailedToRetrieve");
+                }
+            });
+            }
+</script>

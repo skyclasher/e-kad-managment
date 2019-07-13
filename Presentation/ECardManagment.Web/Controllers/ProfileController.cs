@@ -1,60 +1,19 @@
-﻿using ECardManagment.Web.Data;
-using Microsoft.AspNetCore.Identity;
+﻿using ECardManagment.Extensions.Filter;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
-using System;
 using System.ComponentModel.DataAnnotations;
 using System.Threading.Tasks;
 
 namespace ECardManagment.Web.Controllers
 {
+    [ValidateToken]
     public class ProfileController : Controller
     {
-        private readonly UserManager<ApplicationUser> _userManager;
-        private readonly SignInManager<ApplicationUser> _signInManager;
         private readonly ILogger<ProfileController> _logger;
 
-        public ProfileController(UserManager<ApplicationUser> userManager, SignInManager<ApplicationUser> signInManager, ILogger<ProfileController> logger)
+        public ProfileController(ILogger<ProfileController> logger)
         {
-            _userManager = userManager;
-            _signInManager = signInManager;
             _logger = logger;
-        }
-
-        private ApplicationUser _currentUser;
-
-        public ApplicationUser CurrentUser
-        {
-            get
-            {
-                if (_currentUser == null)
-                {
-                    var user = _userManager.GetUserAsync(User);
-                    if (user == null)
-                    {
-                        throw new ApplicationException($"Unable to load user with ID '{_userManager.GetUserId(User)}'.");
-                    }
-
-                    _currentUser = user.Result;
-                }
-                return _currentUser;
-            }
-        }
-
-        public bool IsEmailConfirmed
-        {
-            get
-            {
-                return _userManager.IsEmailConfirmedAsync(CurrentUser).Result;
-            }
-        }
-
-        public bool IsHasPassword
-        {
-            get
-            {
-                return _userManager.HasPasswordAsync(CurrentUser).Result;
-            }
         }
 
         public class ChangePasswordInput
@@ -85,18 +44,18 @@ namespace ECardManagment.Web.Controllers
                 return BadRequest(ModelState);
             }
 
-            var changePasswordResult = await _userManager.ChangePasswordAsync(CurrentUser, model.OldPassword, model.NewPassword);
-            if (!changePasswordResult.Succeeded)
-            {
-                foreach (var error in changePasswordResult.Errors)
-                {
-                    ModelState.AddModelError(string.Empty, error.Description);
-                }
-                return BadRequest(ModelState);
-            }
+            //var changePasswordResult = await _userManager.ChangePasswordAsync(CurrentUser, model.OldPassword, model.NewPassword);
+            //if (!changePasswordResult.Succeeded)
+            //{
+            //    foreach (var error in changePasswordResult.Errors)
+            //    {
+            //        ModelState.AddModelError(string.Empty, error.Description);
+            //    }
+            //    return BadRequest(ModelState);
+            //}
 
-            await _signInManager.SignInAsync(CurrentUser, isPersistent: false);
-            _logger.LogInformation("User changed their password successfully.");
+            //await _signInManager.SignInAsync(CurrentUser, isPersistent: false);
+            //_logger.LogInformation("User changed their password successfully.");
 
             return Ok("Your password has been changed.");
         }
@@ -124,18 +83,18 @@ namespace ECardManagment.Web.Controllers
                 return BadRequest(ModelState);
             }
 
-            var addPasswordResult = await _userManager.AddPasswordAsync(CurrentUser, model.NewPassword);
-            if (!addPasswordResult.Succeeded)
-            {
-                foreach (var error in addPasswordResult.Errors)
-                {
-                    ModelState.AddModelError(string.Empty, error.Description);
-                }
-                return BadRequest(ModelState);
-            }
+            //var addPasswordResult = await _userManager.AddPasswordAsync(CurrentUser, model.NewPassword);
+            //if (!addPasswordResult.Succeeded)
+            //{
+            //    foreach (var error in addPasswordResult.Errors)
+            //    {
+            //        ModelState.AddModelError(string.Empty, error.Description);
+            //    }
+            //    return BadRequest(ModelState);
+            //}
 
-            await _signInManager.SignInAsync(CurrentUser, isPersistent: false);
-            _logger.LogInformation("User set password successfully.");
+            //await _signInManager.SignInAsync(CurrentUser, isPersistent: false);
+            //_logger.LogInformation("User set password successfully.");
 
             return Ok("Your password has been set.");
         }

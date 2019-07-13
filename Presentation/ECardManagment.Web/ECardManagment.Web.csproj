@@ -8,6 +8,8 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <PackageReference Include="AutoMapper" Version="8.1.1" />
+    <PackageReference Include="AutoMapper.Extensions.Microsoft.DependencyInjection" Version="6.1.1" />
     <PackageReference Include="Microsoft.AspNetCore.App" />
     <PackageReference Include="Microsoft.AspNetCore.Razor.Design" Version="2.2.0" PrivateAssets="All" />
     
@@ -16,11 +18,8 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="Helpers\" />
-  </ItemGroup>
-
-  <ItemGroup>
-    <ProjectReference Include="..\..\..\..\Project\Project.Framework\Project.Framework.csproj" />
+    <ProjectReference Include="..\..\..\..\Project\project-helper\Project.Framework.csproj" />
+    <ProjectReference Include="..\..\..\..\Project\project-jwt-security\Aloji.AspNetCore.JwtSecurity\Project.AspNetCore.JwtSecurity.csproj" />
     <ProjectReference Include="..\..\Process\ECardManagment.Process\ECardManagment.Process.csproj" />
   </ItemGroup>
 </Project>
