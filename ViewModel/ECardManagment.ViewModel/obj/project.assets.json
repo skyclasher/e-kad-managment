@@ -1773,24 +1773,27 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\SYAFIQ-LAPTOP\\.nuget\\packages\\": {},
+    "C:\\Users\\asyaf\\.nuget\\packages\\": {},
+    "C:\\Microsoft\\Xamarin\\NuGet\\": {},
     "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\Dev\\Ecard\\ECardManagment\\ViewModel\\ECardManagment.ViewModel\\ECardManagment.ViewModel.csproj",
+      "projectUniqueName": "C:\\Dev\\ECard\\e-kad-managment\\ViewModel\\ECardManagment.ViewModel\\ECardManagment.ViewModel.csproj",
       "projectName": "ECardManagment.ViewModel",
-      "projectPath": "D:\\Dev\\Ecard\\ECardManagment\\ViewModel\\ECardManagment.ViewModel\\ECardManagment.ViewModel.csproj",
-      "packagesPath": "C:\\Users\\SYAFIQ-LAPTOP\\.nuget\\packages\\",
-      "outputPath": "D:\\Dev\\Ecard\\ECardManagment\\ViewModel\\ECardManagment.ViewModel\\obj\\",
+      "projectPath": "C:\\Dev\\ECard\\e-kad-managment\\ViewModel\\ECardManagment.ViewModel\\ECardManagment.ViewModel.csproj",
+      "packagesPath": "C:\\Users\\asyaf\\.nuget\\packages\\",
+      "outputPath": "C:\\Dev\\ECard\\e-kad-managment\\ViewModel\\ECardManagment.ViewModel\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
+        "C:\\Microsoft\\Xamarin\\NuGet\\",
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
       ],
       "configFilePaths": [
-        "C:\\Users\\SYAFIQ-LAPTOP\\AppData\\Roaming\\NuGet\\NuGet.Config",
-        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        "C:\\Users\\asyaf\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
       ],
       "originalTargetFrameworks": [
         "netstandard2.0"
@@ -1802,8 +1805,8 @@
       "frameworks": {
         "netstandard2.0": {
           "projectReferences": {
-            "D:\\Dev\\Project\\project-helper\\Project.Framework.csproj": {
-              "projectPath": "D:\\Dev\\Project\\project-helper\\Project.Framework.csproj"
+            "C:\\Dev\\Project\\project-helper\\Project.Framework.csproj": {
+              "projectPath": "C:\\Dev\\Project\\project-helper\\Project.Framework.csproj"
             }
           }
         }
