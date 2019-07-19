@@ -2,69 +2,64 @@
 using ECardManagment.Framework.Constants;
 using ECardManagment.Framework.Helpers;
 using ECardManagment.ViewModel.Dashboards;
-using ECardManagment.ViewModel.Users;
 using Microsoft.Extensions.Options;
-using Newtonsoft.Json;
-using Newtonsoft.Json.Linq;
 using Project.Framework.Exceptions;
 using Project.Framework.Sessions;
 using Project.Framework.WebService;
-using System;
-using System.Linq;
 using System.Net;
 using ProjectConstant = Project.Framework.Constants;
 
 namespace ECardManagment.Process.API.Dashboards
 {
-    public class DashboardProcess : BaseProcessController, IDashboardProcess
-    {
-        private readonly IWebServiceExecutorFactory _serviceFactory;
-        private readonly IMapper _mapper;
+	public class DashboardProcess : BaseProcessController, IDashboardProcess
+	{
+		private readonly IWebServiceExecutorFactory _serviceFactory;
+		private readonly IMapper _mapper;
 
-        public DashboardProcess(IOptions<AppSettings> setting, IWebServiceExecutorFactory service, IMapper mapper)
-            : base(setting)
-        {
-            _serviceFactory = service;
-            _mapper = mapper;
+		public DashboardProcess(IOptions<AppSettings> setting, IWebServiceExecutorFactory service, IMapper mapper)
+			: base(setting)
+		{
+			_serviceFactory = service;
+			_mapper = mapper;
 
-        }
+		}
 
-     
-        public RsvpChartVM GetRsvpChartData(string userId)
-        {
-            RsvpChartVM result = new RsvpChartVM(); ;
 
-            IWebServiceResponse<RsvpChartVM> response;
+		public RsvpChartVM GetRsvpChartData(string userId)
+		{
+			RsvpChartVM result = new RsvpChartVM(); ;
 
-            IWebServiceExecutor service = _serviceFactory.CreateInstance(RestSharpWebServiceExecutorType.BearerToken.Value, UserSession.Token);
+			IWebServiceResponse<RsvpChartVM> response;
 
-            try
-            {
-                response = service.ExecuteRequest<RsvpChartVM>
-                    (
-                        GetApiUrl
-                        (
-                            Constant.Api.Path.GetRsvpChartData, false, userId
-                        ),
-                        HttpMethod.GET
-                    );
-            }
-            catch (WebServiceException ex)
-            {
-                throw new ProcessException(ProjectConstant.Constant.Message.Error.WebService.WebServiceFailure, ex);
-            }
+			IWebServiceExecutor service = _serviceFactory.CreateInstance(RestSharpWebServiceExecutorType.BearerToken.Value, UserSession.Token);
 
-            if (response.StatusCode == HttpStatusCode.OK)
-            {
-                result = response.Data;
+			try
+			{
+				response = service.ExecuteRequest<RsvpChartVM>
+					(
+						GetApiUrl
+						(
+							Constant.Api.Path.GetRsvpChartData, false, userId
+						),
+						HttpMethod.GET
+					);
+			}
+			catch (WebServiceException ex)
+			{
+				throw new ProcessException(ProjectConstant.Constant.Message.Error.WebService.WebServiceFailure, ex);
+			}
 
-            }
-            else
-            {
-                throw new ProcessException(response.StatusCode, ProjectConstant.Constant.Message.Error.WebService.WebServiceError);
-            }
-            return result;
-        }
+			if (response.StatusCode == HttpStatusCode.OK)
+			{
+				result = response.Data;
 
-    }
+			}
+			else
+			{
+				throw new ProcessException(response.StatusCode, ProjectConstant.Constant.Message.Error.WebService.WebServiceError);
+			}
+			return result;
+		}
+
+	}
 }
