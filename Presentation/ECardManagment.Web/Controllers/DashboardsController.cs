@@ -33,7 +33,7 @@ namespace ECardManagment.Web.Controllers
 
 		public IActionResult Index()
 		{
-			string userId = UserSession.UserId.Value.ToString();
+			string userId = UserSession.UserId;
 
 			DashboardVM dashboardVM = new DashboardVM
 			{
@@ -48,7 +48,7 @@ namespace ECardManagment.Web.Controllers
 		[HttpGet]
 		public ActionResult GetPagedRsvp(int currentPage, string searchText)
 		{
-			PagingHelper<RsvpVM> pagedRsvp = _rspvProcess.GetPagedAttendRsvpByUserId(UserSession.UserId.Value.ToString(), searchText, currentPage);
+			PagingHelper<RsvpVM> pagedRsvp = _rspvProcess.GetPagedAttendRsvpByUserId(UserSession.UserId, searchText, currentPage);
 			return PartialView(Constant.ViewPath.RsvpListing, pagedRsvp);
 		}
 
