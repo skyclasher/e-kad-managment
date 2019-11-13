@@ -39,17 +39,26 @@ namespace ECardManagment.Web.Controllers
 			{
 				RsvpChartVM = _dashboardProcess.GetRsvpChartData(userId),
 				RsvpData = _rspvProcess.GetRsvpByUserId(userId),
-				PagedAttendRsvpData = _rspvProcess.GetPagedAttendRsvpByUserId(userId, string.Empty, 1)
+				PagedAttendRsvpData = _rspvProcess.GetPagedAttendRsvpByUserId(userId, string.Empty, 1),
+				PagedNotAttendRsvpData = _rspvProcess.GetPagedNotAttendRsvpByUserId(userId, string.Empty, 1)
 			};
 			return View(Constant.ViewPath.Dashboard, dashboardVM);
 		}
 
 
 		[HttpGet]
-		public ActionResult GetPagedRsvp(int currentPage, string searchText)
+		public ActionResult GetPagedAttendRsvp(int currentPage, string searchText)
 		{
 			PagingHelper<RsvpVM> pagedRsvp = _rspvProcess.GetPagedAttendRsvpByUserId(UserSession.UserId, searchText, currentPage);
-			return PartialView(Constant.ViewPath.RsvpListing, pagedRsvp);
+			return PartialView(Constant.ViewPath.RsvpAttendListing, pagedRsvp);
+		}
+
+
+		[HttpGet]
+		public ActionResult GetPagedNotAttendRsvp(int currentPage, string searchText)
+		{
+			PagingHelper<RsvpVM> pagedRsvp = _rspvProcess.GetPagedNotAttendRsvpByUserId(UserSession.UserId, searchText, currentPage);
+			return PartialView(Constant.ViewPath.RsvpNotAttendListing, pagedRsvp);
 		}
 
 	}

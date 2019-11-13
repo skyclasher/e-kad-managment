@@ -5,25 +5,27 @@
 // Created Date		: 2019-1-13
 namespace ECardManagment.Framework.Constants
 {
-    public partial class Constant
-    {
-        public class ViewPath
-        {
-            public const string RsvpListing = "~/Views/Dashboards/Rsvp/_List.cshtml"; 
-            public const string Dashboard = "~/Views/Dashboards/Dashboard2.cshtml"; 
-        }
+	public partial class Constant
+	{
+		public class ViewPath
+		{
+			public const string RsvpAttendListing = "~/Views/Dashboards/Rsvp/_ListAttend.cshtml";
+			public const string RsvpNotAttendListing = "~/Views/Dashboards/Rsvp/_ListNotAttend.cshtml";
+			public const string Dashboard = "~/Views/Dashboards/Dashboard2.cshtml";
+		}
 
-        public class Controller
-        {
-            public const string Account = "Account";
-            public const string Dashboard = "Dashboards";
-        }
+		public class Controller
+		{
+			public const string Account = "Account";
+			public const string Dashboard = "Dashboards";
+		}
 
-        public class Action
-        { 
-            public const string Login = "Login";
-            public const string GetPagedRsvp = "GetPagedRsvp";
-        }
+		public class Action
+		{
+			public const string Login = "Login";
+			public const string GetPagedAttendRsvp = "GetPagedAttendRsvp";
+			public const string GetPagedNotAttendRsvp = "GetPagedNotAttendRsvp";
+		}
 
-    }
+	}
 }
