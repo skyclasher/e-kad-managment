@@ -78,6 +78,10 @@
 						Tidak Hadir
 						<span class="pull-right text-red"> @Model.RsvpData.Where(y => y.Attendance == "T").ToList().Count</span>
 					</li>
+					<li>
+						Tiada Jawapan
+						<span class="pull-right text-gray"> @Model.RsvpData.Where(y => y.Attendance != "H" && y.Attendance != "M" && y.Attendance != "T").ToList().Count</span>
+					</li>
 				</ul>
 			</div>
 			<!-- /.footer -->
