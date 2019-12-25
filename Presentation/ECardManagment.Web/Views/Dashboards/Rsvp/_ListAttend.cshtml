@@ -3,11 +3,11 @@
 @using ProjectConstant = Project.Framework.Constants;
 @model PagingHelper<ECardManagment.ViewModel.Rsvps.RsvpVM>
 
-<div id="resultTable">
+<div id="resultTableAttend">
 	<div class="row">
 		<div class="col-md-12">
 			<b>Hadir</b> <br />
-			<div id="resultTable">
+			<div id="resultTableAttend">
 				<div class="input-group">
 					@Html.TextBoxFor(model => model.SearchText, new { @class = "form-control", @placeholder = "Search..." })
 					<div class="input-group-btn">
@@ -60,7 +60,7 @@
 <script type="text/javascript">
 	 $('#SearchText').keypress(function (e) {
 			if (e.which == 13) {
-				GetPagingResult(1);
+				GetPagingAttendResult(1);
 			}
 		});
 
@@ -75,11 +75,11 @@
 			visiblePages: 5,
 			initiateStartPageClick: false,
 			onPageClick: function (event, page) {
-				GetPagingResult(page);
+				GetPagingAttendResult(page);
 			}
 		});
 
-		function GetPagingResult(page) {
+		function GetPagingAttendResult(page) {
 			var searchText = $('#SearchText').val();
 
 			var params = {
@@ -92,7 +92,7 @@
 				url: '@Url.Action(Constant.Action.GetPagedAttendRsvp, Constant.Controller.Dashboard)',
 				data: params,
 				success: function (data) {
-					$("#resultTable").html(data);
+					$("#resultTableAttend").html(data);
 				},
 				beforeSend: function () {
 					$("#overlay").show();

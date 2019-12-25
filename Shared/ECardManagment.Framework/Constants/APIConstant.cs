@@ -14,6 +14,7 @@
 				public const string GetRsvpByUserId = "api/Rsvp/GetRsvpByUserId/{0}";
 				public const string GetPagedRsvpByUserId = "api/Rsvp/GetPagedRsvpByUserId/{0}/{1}/{2}";
 				public const string GetPagedAttendRsvpByUserId = "api/Rsvp/GetPagedAttendRsvpByUserId/{0}/{1}/{2}";
+				public const string GetPagedMaybeAttendRsvpByUserId = "api/Rsvp/GetPagedMaybeAttendRsvpByUserId/{0}/{1}/{2}";
 				public const string GetPagedNotAttendRsvpByUserId = "api/Rsvp/GetPagedNotAttendRsvpByUserId/{0}/{1}/{2}";
 
 			}

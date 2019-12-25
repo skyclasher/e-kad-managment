@@ -10,5 +10,6 @@ namespace ECardManagment.Process.API.Rsvps
 		PagingHelper<RsvpVM> GetPagedRsvpByUserId(string userId, string searchText, int currentPage);
 		PagingHelper<RsvpVM> GetPagedAttendRsvpByUserId(string userId, string searchText, int currentPage);
 		PagingHelper<RsvpVM> GetPagedNotAttendRsvpByUserId(string userId, string searchText, int currentPage);
+		PagingHelper<RsvpVM> GetPagedMaybeAttendRsvpByUserId(string userId, string searchText, int currentPage);
 	}
 }

@@ -10,6 +10,7 @@ namespace ECardManagment.ViewModel.Dashboards
 
 		public List<RsvpVM> RsvpData { get; set; }
 		public PagingHelper<RsvpVM> PagedAttendRsvpData { get; set; }
+		public PagingHelper<RsvpVM> PagedMaybeAttendRsvpData { get; set; }
 		public PagingHelper<RsvpVM> PagedNotAttendRsvpData { get; set; }
 	}
 }

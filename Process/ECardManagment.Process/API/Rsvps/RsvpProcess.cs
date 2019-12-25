@@ -140,6 +140,45 @@ namespace ECardManagment.Process.API.Rsvps
 			return result;
 		}
 
+		public PagingHelper<RsvpVM> GetPagedMaybeAttendRsvpByUserId(string userId, string searchText, int currentPage)
+		{
+			PagingHelper<RsvpVM> result = new PagingHelper<RsvpVM>();
+
+			IWebServiceResponse<PagingHelper<RsvpVM>> response;
+
+			IWebServiceExecutor service = _serviceFactory.CreateInstance(RestSharpWebServiceExecutorType.BearerToken.Value, UserSession.Token);
+
+			if (string.IsNullOrEmpty(searchText))
+				searchText = ProjectConstant.Constant.ReplaceText.EmptyString;
+
+			try
+			{
+				response = service.ExecuteRequest<PagingHelper<RsvpVM>>
+					(
+						GetApiUrl
+						(
+							Constant.Api.Path.GetPagedMaybeAttendRsvpByUserId, false, userId, searchText, currentPage.ToString()
+						),
+						HttpMethod.GET
+					);
+			}
+			catch (WebServiceException ex)
+			{
+				throw new ProcessException(ProjectConstant.Constant.Message.Error.WebService.WebServiceFailure, ex);
+			}
+
+			if (response.StatusCode == HttpStatusCode.OK)
+			{
+				result = response.Data;
+
+			}
+			else
+			{
+				throw new ProcessException(response.StatusCode, ProjectConstant.Constant.Message.Error.WebService.WebServiceError);
+			}
+			return result;
+		}
+
 		public PagingHelper<RsvpVM> GetPagedNotAttendRsvpByUserId(string userId, string searchText, int currentPage)
 		{
 			PagingHelper<RsvpVM> result = new PagingHelper<RsvpVM>();

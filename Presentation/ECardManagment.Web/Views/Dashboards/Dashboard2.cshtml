@@ -67,12 +67,12 @@
 						@*<a href="#">
 						*@
 						Hadir
-						<span class="pull-right text-green"> @Model.RsvpData.Where(y => y.Attendance == "H").ToList().Count</span>
+						<span class="pull-right text-green"> @Model.RsvpData.Where(y => y.Attendance == "H").ToList().Sum(x => x.AttCount)</span>
 						@*
 							</a>*@
 					</li>
 					<li>
-						Mungkin <span class="pull-right text-yellow"> @Model.RsvpData.Where(y => y.Attendance == "M").ToList().Count</span>
+						Mungkin <span class="pull-right text-yellow"> @Model.RsvpData.Where(y => y.Attendance == "M").ToList().Sum(x => x.AttCount)</span>
 					</li>
 					<li>
 						Tidak Hadir
@@ -80,7 +80,7 @@
 					</li>
 					<li>
 						Tiada Jawapan
-						<span class="pull-right text-gray"> @Model.RsvpData.Where(y => y.Attendance != "H" && y.Attendance != "M" && y.Attendance != "T").ToList().Count</span>
+						<span class="pull-right text-gray"> @Model.RsvpData.Where(y => y.Attendance != "H" && y.Attendance != "M" && y.Attendance != "T").ToList().Sum(x => x.AttCount)</span>
 					</li>
 				</ul>
 			</div>
@@ -93,6 +93,10 @@
 			<!-- /.box-header -->
 			<div class="box-body">
 				@await Html.PartialAsync(Constant.ViewPath.RsvpAttendListing, Model.PagedAttendRsvpData)
+			</div>
+			<!-- /.box-header -->
+			<div class="box-body">
+				@await Html.PartialAsync(Constant.ViewPath.RsvpMaybeAttendListing, Model.PagedMaybeAttendRsvpData)
 			</div>
 			<!-- /.box-header -->
 			<div class="box-body">

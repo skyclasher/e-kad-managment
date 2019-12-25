@@ -3,13 +3,13 @@
 @using ProjectConstant = Project.Framework.Constants;
 @model PagingHelper<ECardManagment.ViewModel.Rsvps.RsvpVM>
 
-<div id="resultTableNotAttend">
+<div id="resultTableMaybeAttend">
 	<div class="row">
 		<div class="col-md-12">
-			<b>Tidak Hadir</b> <br />
-			<div id="resultTableNotAttend">
+			<b>Mungkin Hadir / Tiada Jawapan</b> <br />
+			<div id="resultTableMaybeAttend">
 				<div class="input-group">
-					@Html.TextBoxFor(model => model.SearchText, new { @class = "form-control", @placeholder = "Search...", @id = "SearchTextNotAttend" })
+					@Html.TextBoxFor(model => model.SearchText, new { @class = "form-control", @placeholder = "Search...", @id = "SearchTextMaybeAttend" })
 					<div class="input-group-btn">
 						<a class="btn btn-default" onclick="GetPagingResult(1);"><i class="fa fa-search"></i></a>
 					</div>
@@ -19,17 +19,21 @@
 					<thead>
 						<tr>
 							<th width="20%">Nama</th>
+							<th width="5%">Bil. Hadir</th>
 							<th>Ucapan</th>
 						</tr>
 					</thead>
 					<tbody>
 						@if (Model.ListData.Count() > 0)
 						{
-							@foreach (var rsvp in Model.ListData.Where(y => y.Attendance == "T").OrderBy(x => x.Name))
+							@foreach (var rsvp in Model.ListData.Where(y => y.Attendance != "H" && y.Attendance != "T").OrderBy(x => x.Name))
 							{
 								<tr>
 									<td class="text-blue">
 										@Html.DisplayFor(model => rsvp.Name)
+									</td>
+									<td class="text-blue">
+										@Html.DisplayFor(model => rsvp.AttCount)
 									</td>
 									<td class="text-blue">
 										@Html.DisplayFor(model => rsvp.Wishes)
@@ -45,7 +49,7 @@
 				</table>
 			</div>
 			<div class="pull-right">
-				<ul class="pagination pagination-sm no-margin pull-right" id="pagination2"></ul>
+				<ul class="pagination pagination-sm no-margin pull-right" id="pagination3"></ul>
 			</div>
 		</div>
 		<!-- /.col -->
@@ -54,9 +58,9 @@
 </div>
 
 <script type="text/javascript">
-	 $('#SearchText').keypress(function (e) {
+	 $('#SearchTextMaybeAttend').keypress(function (e) {
 			if (e.which == 13) {
-				GetPagingNotAttendResult(1);
+				GetPagingMaybeAttendResult(1);
 			}
 		});
 
@@ -65,18 +69,18 @@
 		if (totalPages == 0)
 			totalPages = 1
 
-		$('#pagination2').twbsPagination({
+		$('#pagination3').twbsPagination({
 			startPage: @Model.CurrentPage,
 			totalPages: totalPages,
 			visiblePages: 5,
 			initiateStartPageClick: false,
 			onPageClick: function (event, page) {
-				GetPagingNotAttendResult(page);
+				GetPagingMaybeAttendResult(page);
 			}
 		});
 
-		function GetPagingNotAttendResult(page) {
-			var searchText = $('#SearchTextNotAttend').val();
+		function GetPagingMaybeAttendResult(page) {
+			var searchText = $('#SearchTextMaybeAttend').val();
 
 			var params = {
 				currentPage: page,
@@ -85,17 +89,17 @@
 
 			$.ajax({
 				type: 'GET',
-				url: '@Url.Action(Constant.Action.GetPagedNotAttendRsvp, Constant.Controller.Dashboard)',
+				url: '@Url.Action(Constant.Action.GetPagedMaybeAttendRsvp, Constant.Controller.Dashboard)',
 				data: params,
 				success: function (data) {
-					$("#resultTableNotAttend").html(data);
+					$("#resultTableMaybeAttend").html(data);
 				},
 				beforeSend: function () {
 					$("#overlay").show();
 				},
 				complete: function () {
 					$("#overlay").hide();
-					$('#SearchTextNotAttend').focus().select();
+					$('#SearchTextMaybeAttend').focus().select();
 				},
 				error: function () {
 					alert("@ProjectConstant.Constant.Error.FailedToRetrieve");
